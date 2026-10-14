@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.TestExtension
-import com.owlite.commuteskuy.configureKotlinAndroid
+import com.novitaguok.boilerplate.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply

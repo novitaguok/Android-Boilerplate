@@ -23,5 +23,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "commuteskuy"
+rootProject.name = "boilerplate"
 include(":app")

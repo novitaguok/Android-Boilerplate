@@ -66,19 +66,19 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 room = { id = "androidx.room", version.ref = "room" }
 
 # Plugins defined in this project
-commuteskuy-android-application = { id = "commuteskuy.android.application" }
-commuteskuy-android-application-compose = { id = "commuteskuy.android.application.compose" }
-commuteskuy-android-application-firebase = { id = "commuteskuy.android.application.firebase" }
-commuteskuy-android-application-flavors = { id = "commuteskuy.android.application.flavors" }
-commuteskuy-android-application-jacoco = { id = "commuteskuy.android.application.jacoco" }
-commuteskuy-android-feature-impl = { id = "commuteskuy.android.feature.impl" }
-commuteskuy-android-feature-api = { id = "commuteskuy.android.feature.api" }
-commuteskuy-android-library = { id = "commuteskuy.android.library" }
-commuteskuy-android-library-compose = { id = "commuteskuy.android.library.compose" }
-commuteskuy-android-library-jacoco = { id = "commuteskuy.android.library.jacoco" }
-commuteskuy-android-lint = { id = "commuteskuy.android.lint" }
-commuteskuy-android-room = { id = "commuteskuy.android.room" }
-commuteskuy-android-test = { id = "commuteskuy.android.test" }
-commuteskuy-hilt = { id = "commuteskuy.hilt" }
-commuteskuy-jvm-library = { id = "commuteskuy.jvm.library" }
-commuteskuy-root = { id = "commuteskuy.root" }
+boilerplate-android-application = { id = "boilerplate.android.application" }
+boilerplate-android-application-compose = { id = "boilerplate.android.application.compose" }
+boilerplate-android-application-firebase = { id = "boilerplate.android.application.firebase" }
+boilerplate-android-application-flavors = { id = "boilerplate.android.application.flavors" }
+boilerplate-android-application-jacoco = { id = "boilerplate.android.application.jacoco" }
+boilerplate-android-feature-impl = { id = "boilerplate.android.feature.impl" }
+boilerplate-android-feature-api = { id = "boilerplate.android.feature.api" }
+boilerplate-android-library = { id = "boilerplate.android.library" }
+boilerplate-android-library-compose = { id = "boilerplate.android.library.compose" }
+boilerplate-android-library-jacoco = { id = "boilerplate.android.library.jacoco" }
+boilerplate-android-lint = { id = "boilerplate.android.lint" }
+boilerplate-android-room = { id = "boilerplate.android.room" }
+boilerplate-android-test = { id = "boilerplate.android.test" }
+boilerplate-hilt = { id = "boilerplate.hilt" }
+boilerplate-jvm-library = { id = "boilerplate.jvm.library" }
+boilerplate-root = { id = "boilerplate.root" }

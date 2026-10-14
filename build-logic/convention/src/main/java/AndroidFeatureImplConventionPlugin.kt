@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.LibraryExtension
-import com.owlite.commuteskuy.libs
+import com.novitaguok.boilerplate.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
@@ -9,8 +9,8 @@ import org.gradle.kotlin.dsl.dependencies
 class AndroidFeatureImplConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            apply(plugin = "commuteskuy.android.library")
-            apply(plugin = "commuteskuy.hilt")
+            apply(plugin = "boilerplate.android.library")
+            apply(plugin = "boilerplate.hilt")
 
             extensions.configure<LibraryExtension> {
                 testOptions.animationsDisabled = true

@@ -1,4 +1,4 @@
-package com.owlite.commuteskuy
+package com.novitaguok.boilerplate
 
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.ApplicationProductFlavor

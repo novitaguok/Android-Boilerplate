@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.owlite.commuteskuy"
+    namespace = "com.novitaguok.boilerplate"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.owlite.commuteskuy"
+        applicationId = "com.novitaguok.boilerplate"
         minSdk = 25
         targetSdk = 37
         versionCode = 1

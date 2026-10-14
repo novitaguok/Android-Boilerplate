@@ -1,4 +1,4 @@
-package com.owlite.commuteskuy
+package com.novitaguok.boilerplate
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog
