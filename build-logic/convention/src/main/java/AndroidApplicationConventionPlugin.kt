@@ -9,8 +9,10 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
         with(target) {
             apply("com.android.application")
 
-            extensions.configure<ApplicationExtension>() {
-
+            extensions.configure<ApplicationExtension> {
+                configureKotlinAndroid(this)
+                defaultConfig.targetSdk = 37
+                testOptions.animationsDisabled = true
             }
         }
     }

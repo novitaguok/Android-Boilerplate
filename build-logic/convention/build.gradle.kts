@@ -1,73 +1,33 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * By listing all the plugins used throughout all subprojects in the root project build script, it
+ * ensures that the build script classpath remains the same for all projects. This avoids potential
+ * problems with mismatching versions of transitive plugin dependencies. A subproject that applies
+ * an unlisted plugin will have that plugin and its dependencies _appended_ to the classpath, not
+ * replacing pre-existing dependencies.
+ */
 plugins {
-    `kotlin-dsl`
-    alias(libs.plugins.jetbrains.kotlin.jvm)
-}
-
-group = "com.novitaguok.boilerplate.buildlogic"
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
-    }
-}
-
-dependencies {
-    compileOnly(libs.android.gradlePlugin)
-    compileOnly(libs.android.tools.common)
-    compileOnly(libs.compose.gradlePlugin)
-//    compileOnly(libs.firebase.crashlytics.gradlePlugin)
-//    compileOnly(libs.firebase.performance.gradlePlugin)
-    compileOnly(libs.kotlin.gradlePlugin)
-    compileOnly(libs.ksp.gradlePlugin)
-    compileOnly(libs.room.gradlePlugin)
-}
-
-gradlePlugin {
-    plugins {
-        register("androidApplication") {
-            id = libs.plugins.boilerplate.android.application.asProvider().get().pluginId
-            implementationClass = "AndroidApplicationConventionPlugin"
-        }
-        register("androidApplicationCompose") {
-            id = libs.plugins.boilerplate.android.application.compose.get().pluginId
-            implementationClass = "AndroidApplicationComposeConventionPlugin"
-        }
-        register("androidFlavors") {
-            id = libs.plugins.boilerplate.android.application.flavors.get().pluginId
-            implementationClass = "AndroidApplicationFlavorsConventionPlugin"
-        }
-        register("androidFeatureApi") {
-            id = libs.plugins.boilerplate.android.feature.api.get().pluginId
-            implementationClass = "AndroidFeatureApiConventionPlugin"
-        }
-        register("androidFeatureImpl") {
-            id = libs.plugins.boilerplate.android.feature.impl.get().pluginId
-            implementationClass = "AndroidFeatureImplConventionPlugin"
-        }
-        register("androidLibrary") {
-            id = libs.plugins.boilerplate.android.library.asProvider().get().pluginId
-            implementationClass = "AndroidLibraryConventionPlugin"
-        }
-        register("androidRoom") {
-            id = libs.plugins.boilerplate.android.room.get().pluginId
-            implementationClass = "AndroidRoomConventionPlugin"
-        }
-        register("androidTest") {
-            id = libs.plugins.boilerplate.android.test.get().pluginId
-            implementationClass = "AndroidTestConventionPlugin"
-        }
-        register("hilt") {
-            id = libs.plugins.boilerplate.hilt.get().pluginId
-            implementationClass = "HiltConventionPlugin"
-        }
-        register("jvmLibrary") {
-            id = libs.plugins.boilerplate.jvm.library.get().pluginId
-            implementationClass = "JvmLibraryConventionPlugin"
-        }
-    }
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
+    alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.room) apply false
 }
